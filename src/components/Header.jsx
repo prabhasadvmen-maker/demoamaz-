@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { 
   LuSearch, LuMapPin, LuUser, LuHeart, LuShoppingCart, LuMenu, LuX, LuChevronDown, 
-  LuTruck, LuRefreshCw, LuStar, LuSmartphone, LuInfo, LuShoppingBag, LuPercent
+  LuTruck, LuRefreshCw, LuStar, LuSmartphone, LuInfo, LuShoppingBag, LuPercent, LuHouse
 } from 'react-icons/lu';
 import { useCart } from '../context/CartContext';
 import { useWishlist } from '../context/WishlistContext';
@@ -236,6 +236,10 @@ export default function Header() {
 
             <div className="flex-1 overflow-y-auto pb-6">
               <p className="px-4 pt-4 pb-2 text-xs font-bold text-slate-400 uppercase tracking-wider">Categories</p>
+              <Link to="/" onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 border-b border-slate-50">
+                <span className="text-slate-500"><LuHouse /></span> Home
+              </Link>
               {categories.map(c => (
                 <Link key={c.id} to={`/category/${c.id}`} onClick={() => setIsMobileMenuOpen(false)}
                   className="flex items-center gap-3 px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 border-b border-slate-50">

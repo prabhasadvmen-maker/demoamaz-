@@ -39,8 +39,8 @@ export default function HomePage() {
       {/* SECTION 1: HERO BANNER */}
       <section className="bg-[#eef5fa] overflow-hidden relative">
         {/* Background elements */}
-        <div className="absolute top-0 right-0 w-2/3 h-full overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80" alt="Hero Woman" className="absolute right-0 top-1/2 -translate-y-1/2 h-[120%] object-cover object-top opacity-90 mix-blend-multiply" style={{ maskImage: 'linear-gradient(to right, transparent, black 30%)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 30%)' }} />
+        <div className="absolute top-0 right-0 w-full md:w-2/3 h-full overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80" alt="Hero Woman" className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] object-cover object-top opacity-20 md:opacity-90 mix-blend-multiply" style={{ maskImage: 'linear-gradient(to right, transparent, black 30%)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 30%)' }} />
         </div>
         
         {/* Decorative badges (UP TO 70% OFF) */}
