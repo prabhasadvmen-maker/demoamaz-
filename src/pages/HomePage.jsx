@@ -37,10 +37,14 @@ export default function HomePage() {
     <div className="bg-slate-50 min-h-screen pb-16">
       
       {/* SECTION 1: HERO BANNER */}
-      <section className="bg-[#eef5fa] overflow-hidden relative">
+      <section className="bg-gradient-to-br from-[#e0f2fe] via-[#f0f9ff] to-[#eef5fa] overflow-hidden relative">
+        
+        {/* Ambient Glowing Blobs */}
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl mix-blend-multiply pointer-events-none"></div>
+        <div className="absolute top-1/2 -left-24 w-80 h-80 bg-purple-300/20 rounded-full blur-3xl mix-blend-multiply pointer-events-none"></div>
         {/* Background elements */}
-        <div className="absolute top-0 right-0 w-full md:w-2/3 h-full overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80" alt="Hero Woman" className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] object-cover object-top opacity-20 md:opacity-90 mix-blend-multiply" style={{ maskImage: 'linear-gradient(to right, transparent, black 30%)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 30%)' }} />
+        <div className="absolute top-0 right-0 w-full md:w-2/3 h-full overflow-hidden hidden md:block">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1200&q=80" alt="Hero Woman" className="absolute right-0 top-1/2 -translate-y-1/2 w-full h-[120%] object-cover object-top opacity-90 mix-blend-multiply" style={{ maskImage: 'linear-gradient(to right, transparent, black 30%)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 30%)' }} />
         </div>
         
         {/* Decorative badges (UP TO 70% OFF) */}
@@ -77,6 +81,15 @@ export default function HomePage() {
               <Link to="/categories" className="bg-white/80 backdrop-blur border border-slate-200 text-slate-700 hover:bg-white px-8 py-3.5 rounded-xl font-bold text-sm transition-all flex items-center justify-center">
                 Explore Categories
               </Link>
+            </div>
+
+            {/* Mobile Hero Image - Unblurred, solid, crisp */}
+            <div className="mt-12 md:hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&q=80" 
+                alt="Happy shopper" 
+                className="w-full h-72 object-cover object-top rounded-3xl shadow-xl border-4 border-white"
+              />
             </div>
           </div>
         </div>
